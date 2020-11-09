@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Match Prediction</title>
+</head>
+
+
+<body>
+
+    <div style="color:blue; float:centre;">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2 style="font-family:Calibri; color:#DE1C25; font-size: 35px;">Predict the Winning Team</h2> 
+            <h2 style="font-family:Calibri; color:#420FDE; font-size: 30px;">This App can be used to predict the result of an IPL match</h2>
+            
+            <h3>Select Team1 </h3><br>
+            <select style="font-family:Calibri; font-size: 16px;" name="team1" id="team1" required="required">
+                <option value="Mumbai Indians"  >Mumbai Indians</option>
+                <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                <option value="Deccan Chargers">Deccan Chargers</option>
+                <option value="Chennai Super Kings">Chennai Super Kings</option>
+                <option value="Rajasthan Royals">Rajasthan Royals</option>
+                <option value="Delhi Daredevils">Delhi Daredevils</option>
+                <option value="Gujarat Lions">Gujarat Lions</option>
+                <option value="Kings XI Punjab">Kings XI Punjab</option>
+                <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                <option value="Rising Pune Supergiants">Rising Pune Supergiants</option>
+                <option value="Kochi Tuskers Kerala">Kochi Tuskers Kerala</option>
+                <option value="Pune Warriors">Pune Warriors</option>
+                <option value="Delhi Capitals">Delhi Capitals</option>
+
+            </select>
+            
+            <h3>Select Team2 </h3><br>
+            <select style="font-family:Calibri; font-size: 16px;" name="team2" id="team2" required="required">
+                <option value="Mumbai Indians"  >Mumbai Indians</option>
+                <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                <option value="Deccan Chargers">Deccan Chargers</option>
+                <option value="Chennai Super Kings">Chennai Super Kings</option>
+                <option value="Rajasthan Royals">Rajasthan Royals</option>
+                <option value="Delhi Daredevils">Delhi Daredevils</option>
+                <option value="Gujarat Lions">Gujarat Lions</option>
+                <option value="Kings XI Punjab">Kings XI Punjab</option>
+                <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                <option value="Rising Pune Supergiants">Rising Pune Supergiants</option>
+                <option value="Kochi Tuskers Kerala">Kochi Tuskers Kerala</option>
+                <option value="Pune Warriors">Pune Warriors</option>
+                <option value="Delhi Capitals">Delhi Capitals</option>
+
+            </select>
+            
+                        
+            <h3>Which Team won the Toss(from Team1 and Team2)?</h3><br>
+            <select style="font-family:Calibri; font-size: 16px;" name="toss_winner" id="toss_winner" required="required">
+                <option value="Mumbai Indians"  >Mumbai Indians</option>
+                <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                <option value="Deccan Chargers">Deccan Chargers</option>
+                <option value="Chennai Super Kings">Chennai Super Kings</option>
+                <option value="Rajasthan Royals">Rajasthan Royals</option>
+                <option value="Delhi Daredevils">Delhi Daredevils</option>
+                <option value="Gujarat Lions">Gujarat Lions</option>
+                <option value="Kings XI Punjab">Kings XI Punjab</option>
+                <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                <option value="Rising Pune Supergiants">Rising Pune Supergiants</option>
+                <option value="Kochi Tuskers Kerala">Kochi Tuskers Kerala</option>
+                <option value="Pune Warriors">Pune Warriors</option>
+                <option value="Delhi Capitals">Delhi Capitals</option>
+
+            </select>
+            
+             <h3>Select the Stadium </h3><br>
+            <select style="font-family:Calibri; font-size: 16px;" name="venue" id="venue" required="required">
+                <option value="Barabati Stadium"  >Barabati Stadium</option>
+                <option value="Brabourne Stadium">Brabourne Stadium</option>
+                <option value="Buffalo Park">Buffalo Park</option>
+                <option value="De Beers Diamond Oval">De Beers Diamond Oval</option>
+                <option value="Dr DY Patil Sports Academy">Dr DY Patil Sports Academy</option>
+                <option value="Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium">Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium</option>
+                <option value="Dubai International Cricket Stadium">Dubai International Cricket Stadium</option>
+                <option value="Eden Gardens">Eden Gardens</option>
+                <option value="Feroz Shah Kotla">Feroz Shah Kotla</option>
+                <option value="Green Park">Green Park</option>
+                <option value="Himachal Pradesh Cricket Association Stadium">Himachal Pradesh Cricket Association Stadium</option>
+                <option value="Holkar Cricket Stadium">Holkar Cricket Stadium</option>
+                <option value="IS Bindra Stadium">IS Bindra Stadium</option>
+                <option value="JSCA International Stadium Complex">JSCA International Stadium Complex</option>
+                <option value="Kingsmead">Kingsmead</option>
+                <option value="M Chinnaswamy Stadium"  >M Chinnaswamy Stadium</option>
+                <option value="MA Chidambaram Stadium, Chepauk">MA Chidambaram Stadium, Chepauk</option>
+                <option value="Maharashtra Cricket Association Stadium">Maharashtra Cricket Association Stadium</option>
+                <option value="Nehru Stadium">Nehru Stadium</option>
+                <option value="New Wanderers Stadium">New Wanderers Stadium</option>
+                <option value="Newlands">Newlands</option>
+                <option value="OUTsurance Oval">OUTsurance Oval</option>
+                <option value="Punjab Cricket Association Stadium, Mohali">Punjab Cricket Association Stadium, Mohali</option>
+                <option value="Rajiv Gandhi International Stadium, Uppal">Rajiv Gandhi International Stadium, Uppal</option>
+                <option value="Sardar Patel Stadium, Motera">Sardar Patel Stadium, Motera</option>
+                <option value="Saurashtra Cricket Association Stadium">Saurashtra Cricket Association Stadium</option>
+                <option value="Sawai Mansingh Stadium">Sawai Mansingh Stadium</option>
+                <option value="Shaheed Veer Narayan Singh International Stadium">Shaheed Veer Narayan Singh International Stadium</option>
+                <option value="Sharjah Cricket Stadium">Sharjah Cricket Stadium</option>
+                <option value="Sheikh Zayed Stadium">Sheikh Zayed Stadium</option>
+                <option value="St George's Park">St George's Park</option>
+                <option value="Subrata Roy Sahara Stadium">Subrata Roy Sahara Stadium</option>
+                <option value="SuperSport Park">SuperSport Park</option>
+                <option value="Vidarbha Cricket Association Stadium, Jamtha">Vidarbha Cricket Association Stadium, Jamtha</option>
+                <option value="Wankhede Stadium">Wankhede Stadium</option>
+                
+
+            </select>
+            
+            
+            <h3 >What did the team which won the toss choose (enter 0 for Batting, 1 for Fielding)  </h3><br><br>
+            <input id="toss_decision" name="toss_decision" type="number " required="required">
+            
+            
+            <br><br><button style="font-family:Calibri; font-size: 20px;" id="sub" type="submit ">Predict the Winner</button>
+            <h4 style="color:blue; float:center; color:#12DA9D; font-size: 30px;">{{ prediction_text }}</h4>
+<!--            <h4>{{ prediction_text }}</h4>-->
+
+
+
+
+        </form>
+
+    </div>
+    
+<!--
+    <div style="color:blue; float:right; width:300px; color:#12DA9D; font-size: 30px;">
+        <h4>{{ prediction_text }}</h4>
+    
+    </div>
+-->
+    
+
+    
+
+
+    <style>
+        body {
+            background-color: #1C1B1A;
+            text-align: center;
+            padding: 0px;
+        }
+        
+/*
+        #pred_s {
+            position: fixed;
+                right:2500px;
+                top:1000px;
+                font-family:Calibri;
+                color:#12DA9D; 
+                font-size: 30px;                   
+        }
+                
+*/
+
+        
+       h3 {
+            position: absolute;
+                left:10 px;
+                top:200 px;
+                font-family:Calibri;
+                color:#12DA9D; 
+                font-size: 15px;                   
+        }
+        
+        #team1 {
+            width: 185px;
+            height: 25px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        #team1:hover {
+            background-color: coral;
+        }
+        
+        #team2 {
+            width: 185px;
+            height: 25px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        #team2:hover {
+            background-color: coral;
+        }
+        
+        
+        #venue {
+            width: 185px;
+            height: 25px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        #venue:hover {
+            background-color: coral;
+        }
+        
+       #toss_winner {
+            width: 185px;
+            height: 25px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        #toss_winner:hover {
+            background-color: coral;
+        }
+        
+        #toss_decision{
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+
+    </style>
+</body>
+
+</html>
+
