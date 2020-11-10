@@ -10,13 +10,14 @@
 
 <body>
 
-    <div style="color:blue; float:centre;">
+    <div class="bg">
         <form action="{{ url_for('predict')}}" method="post">
             <h2 style="font-family:Calibri; color:#DE1C25; font-size: 35px;">Predict the Winning Team</h2> 
-            <h2 style="font-family:Calibri; color:#420FDE; font-size: 30px;">This App can be used to predict the result of an IPL match</h2>
+            <h2 style="font-family:Calibri; color:#12DA9D; font-size: 30px;">This App can be used to predict the result of an IPL match</h2>
             
-            <h3>Team1 </h3><br>
+            <h3>Select Team1 </h3><br>
             <select style="font-family:Calibri; font-size: 16px; text-align:center;" name="team1" id="team1" required="required">
+               <button onclick="myFunction()" class="dropbtn">Select Team1</button>
                 <option value="Mumbai Indians"  >Mumbai Indians</option>
                 <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
                 <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
@@ -120,7 +121,7 @@
             
             
             <br><br><button style="font-family:Calibri; font-size: 20px;" id="sub" type="submit ">Predict the Winner</button>
-            <h4 style="color:blue; float:center; color:#12DA9D; font-size: 30px;">{{ prediction_text }}</h4>
+            <h4 style="color:blue; float:center; color:yellow; font-size: 30px;">{{ prediction_text }}</h4>
 <!--            <h4>{{ prediction_text }}</h4>-->
 
 
@@ -143,9 +144,16 @@
 
     <style>
         body {
-            background-color: #1C1B1A;
+            
             text-align: center;
             padding: 0px;
+        }
+         h3 {
+            
+                text-align: center;
+                font-family:Calibri;
+                color:black; 
+                font-size: 20px;                   
         }
         
 /*
@@ -154,11 +162,24 @@
                 right:2500px;
                 top:1000px;
                 font-family:Calibri;
-                color:#12DA9D; 
+                color:#12DA9D;https://www.searchpng.com/wp-content/uploads/2019/02/IPL-Logo-PNG-715x715.png 
                 font-size: 30px;                   
         }
                 
 */
+
+        .bg {
+          /* The image used */
+          background-image: url("https://images.unsplash.com/photo-1512719994953-eabf50895df7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+          https://drive.google.com/file/d/1k3Q9cOZmRTDXHa75NGYIwPIbJoNLBEqm/view?usp=sharing
+          /* Full height */
+          height: 100%; 
+
+         /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
         
         #team1 {
             width: 185px;
