@@ -15,8 +15,8 @@
             <h2 style="font-family:Calibri; color:#DE1C25; font-size: 35px;">Predict the Winning Team</h2> 
             <h2 style="font-family:Calibri; color:#420FDE; font-size: 30px;">This App can be used to predict the result of an IPL match</h2>
             
-            <h3>Select Team1 </h3><br>
-            <select style="font-family:Calibri; font-size: 16px;" name="team1" id="team1" required="required">
+            <h3>Team1 </h3><br>
+            <select style="font-family:Calibri; font-size: 16px; text-align:center;" name="team1" id="team1" required="required">
                 <option value="Mumbai Indians"  >Mumbai Indians</option>
                 <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
                 <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
@@ -35,7 +35,7 @@
             </select>
             
             <h3>Select Team2 </h3><br>
-            <select style="font-family:Calibri; font-size: 16px;" name="team2" id="team2" required="required">
+            <select style="font-family:Calibri; font-size: 16px; text-align:center;" name="team2" id="team2" required="required">
                 <option value="Mumbai Indians"  >Mumbai Indians</option>
                 <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
                 <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
@@ -55,7 +55,7 @@
             
                         
             <h3>Which Team won the Toss(from Team1 and Team2)?</h3><br>
-            <select style="font-family:Calibri; font-size: 16px;" name="toss_winner" id="toss_winner" required="required">
+            <select style="font-family:Calibri; font-size: 16px; text-align:center;" name="toss_winner" id="toss_winner" required="required">
                 <option value="Mumbai Indians"  >Mumbai Indians</option>
                 <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
                 <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
@@ -74,7 +74,7 @@
             </select>
             
              <h3>Select the Stadium </h3><br>
-            <select style="font-family:Calibri; font-size: 16px;" name="venue" id="venue" required="required">
+            <select style="font-family:Calibri; font-size: 16px; text-align:center;" name="venue" id="venue" required="required">
                 <option value="Barabati Stadium"  >Barabati Stadium</option>
                 <option value="Brabourne Stadium">Brabourne Stadium</option>
                 <option value="Buffalo Park">Buffalo Park</option>
@@ -83,7 +83,7 @@
                 <option value="Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium">Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium</option>
                 <option value="Dubai International Cricket Stadium">Dubai International Cricket Stadium</option>
                 <option value="Eden Gardens">Eden Gardens</option>
-                <option value="Feroz Shah Kotla">Feroz Shah Kotla</option>
+                <option value="Feroz Shah Kotla Ground">Feroz Shah Kotla Ground</option>
                 <option value="Green Park">Green Park</option>
                 <option value="Himachal Pradesh Cricket Association Stadium">Himachal Pradesh Cricket Association Stadium</option>
                 <option value="Holkar Cricket Stadium">Holkar Cricket Stadium</option>
@@ -115,7 +115,7 @@
             </select>
             
             
-            <h3 >What did the team which won the toss choose (enter 0 for Batting, 1 for Fielding)  </h3><br><br>
+            <h3 >Toss Decision(Enter 0 for Batting, 1 for Fielding)  </h3><br><br>
             <input id="toss_decision" name="toss_decision" type="number " required="required">
             
             
@@ -159,16 +159,6 @@
         }
                 
 */
-
-        
-       h3 {
-            position: absolute;
-                left:10 px;
-                top:200 px;
-                font-family:Calibri;
-                color:#12DA9D; 
-                font-size: 15px;                   
-        }
         
         #team1 {
             width: 185px;
@@ -216,6 +206,7 @@
         }
         
         #toss_decision{
+            width: 185px;
             height: 25px;
             font-size: 20px;
             text-align: center;
